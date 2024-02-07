@@ -1,7 +1,9 @@
 const fs = require("fs");
 
-const correct = JSON.parse(fs.readFileSync("correct.json", "utf-8"));
-const response = JSON.parse(fs.readFileSync("response.json", "utf-8"));
+// const correct = JSON.parse(fs.readFileSync("correct.json", "utf-8"));
+// const response = JSON.parse(fs.readFileSync("response.json", "utf-8"));
+const correct = JSON.parse(fs.readFileSync("new-correct.json", "utf-8"));
+const response = JSON.parse(fs.readFileSync("new-response.json", "utf-8"));
 let i = 1;
 
 const opts = ["A", "B", "C", "D"];
@@ -28,7 +30,7 @@ for (const question of response) {
       +obj.get("Option 4 ID :"),
     ];
     const chosenOpt = obj.get("Chosen Option :");
-    const correct = Math.min(...options) + +correctAns - 1;
+    const correct = correctAns; //Math.min(...options) + +correctAns - 1;
     const chosen = options[+chosenOpt - 1];
     const rightAns = opts[options.findIndex((x) => x == correct)];
     const yourAns = opts[options.findIndex((x) => x == chosen)] || "--";
