@@ -1,9 +1,9 @@
 const fs = require("fs");
 
-// const correct = JSON.parse(fs.readFileSync("correct.json", "utf-8"));
-// const response = JSON.parse(fs.readFileSync("response.json", "utf-8"));
-const correct = JSON.parse(fs.readFileSync("new-correct.json", "utf-8"));
-const response = JSON.parse(fs.readFileSync("new-response.json", "utf-8"));
+const correct = JSON.parse(fs.readFileSync("correct.json", "utf-8"));
+const response = JSON.parse(fs.readFileSync("response.json", "utf-8"));
+// const correct = JSON.parse(fs.readFileSync("new-correct.json", "utf-8"));
+// const response = JSON.parse(fs.readFileSync("new-response.json", "utf-8"));
 let i = 1;
 
 const opts = ["A", "B", "C", "D"];
